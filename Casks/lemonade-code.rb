@@ -19,10 +19,11 @@ cask "lemonade-code" do
 
   app "Lemonade Code.app"
 
-  # Not notarized, so Gatekeeper would block the quarantined app.
-  postflight_steps do
+  # Not notarized, so Gatekeeper would block the quarantined app. Cleared in staging, because
+  # macOS can stop an install step from changing the app once it is installed.
+  preflight_steps do
     run "/usr/bin/xattr",
-        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Lemonade Code.app"],
+        args:         ["-dr", "com.apple.quarantine", "{{staged_path}}/Lemonade Code.app"],
         must_succeed: false
   end
 
