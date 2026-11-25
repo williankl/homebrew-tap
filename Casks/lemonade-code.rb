@@ -1,9 +1,9 @@
 cask "lemonade-code" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.5"
-  sha256 arm:   "c5ae77fd0753428d5175902ce02b8b4fb5d961d8e424011d70cbe1c694bbed16",
-         intel: "d39ce11fbf599849cd0fc0817cd242243c7d88dbf3061e82c8360a7a1942f510"
+  version "0.0.6"
+  sha256 arm:   "e037b71290654526e03b49533435d5c6fffc5578e70af1f94deb0ab6fa9ef904",
+         intel: "8a86bec8c5ec6052e62d7bdf911ce3441c4bb2635dd818e140859a1373094e49"
 
   url "https://github.com/williankl/l-code/releases/download/v#{version}/Lemonade-Code-#{version}-macos-#{arch}.dmg"
   name "Lemonade Code"
